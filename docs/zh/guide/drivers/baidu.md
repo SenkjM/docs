@@ -72,7 +72,10 @@ flowchart TB
 
 ## **刷新令牌**
 
-[点击这里](https://openapi.baidu.com/oauth/2.0/authorize?response_type=code&client_id=iYCeC9g08h5vuP9UqvPHKKSVrKFXGa1v&redirect_uri=https://alist.example.com/tool/baidu/callback&scope=basic,netdisk&qrcode=1) 来获取刷新令牌。
+[点击这里](https://api.oplist.org/) 来获取刷新令牌。
+如果你有百度网盘开发者权限，请选择“百度网盘 验证登录”，并在百度网盘开发者应用后台里填入配置回调地址为该网页提供的回调地址。点击获取token后即可自动获取刷新令牌，并在openlist中配置您自己的cilent_id和cilent_secret。
+如果你没有百度网盘开发权限，请选择“百度网盘 OOB验证”，默认使用es文件浏览器的客户端参数进行配置，点击获取token后耐心等待跳转百度页面，登录授权后复制授权码，回到原网页按照提示即可获取刷新令牌。将cilent_id和cilent_secret配置为es文件浏览器即可使用。
+内置API调用的实现方式为服务器中转刷新access_token，目前暂未上线。
 
 
 
